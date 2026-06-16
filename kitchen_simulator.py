@@ -226,6 +226,9 @@ class KitchenSimulator:
             print(f"  备菜: {sum(prep_times)/len(prep_times):.2f} 分钟 (基准 {self.prep_station.base_time})")
             print(f"  烹饪: {sum(cook_times)/len(cook_times):.2f} 分钟 (基准 {self.cook_station.base_time})")
             print(f"  打包: {sum(pack_times)/len(pack_times):.2f} 分钟 (基准 {self.pack_station.base_time})")
+        else:
+            print(f"\n⏱️  平均等待时间: N/A (无完成订单)")
+            print(f"🐢 最慢订单: N/A (无完成订单)")
 
         if canceled:
             print(f"\n❌ 被取消的订单号: {', '.join(f'#{o.order_id}' for o in canceled)}")
